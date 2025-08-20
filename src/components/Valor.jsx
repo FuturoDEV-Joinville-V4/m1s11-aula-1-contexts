@@ -1,12 +1,7 @@
-import { PrimeiroContexto } from "../App"
+import { useCount } from "../contexts/CountContext"
 
 export function Valor() {
+    const { count } = useCount()
 
-    return (
-        <PrimeiroContexto.Consumer>
-            {(value) => {
-                return <h1>{value.valor}</h1>
-            }}
-        </PrimeiroContexto.Consumer>
-    )
+    return <h1>{count}</h1>
 }
